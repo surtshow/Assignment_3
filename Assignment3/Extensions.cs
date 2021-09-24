@@ -9,6 +9,6 @@ namespace BDSA2021.Assignment3
         public static IEnumerable<T> Flatten<T> (this IEnumerable<T>[] items)
         => items.SelectMany(x => x).ToList<T>();
 
-        public static bool IsSecure<T> (this Uri item) => Uri.
+        public static bool IsSecure<T> (this Uri item) => item.Scheme == Uri.UriSchemeHttps;
     }
 }

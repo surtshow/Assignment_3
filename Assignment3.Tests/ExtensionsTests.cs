@@ -13,10 +13,18 @@ namespace BDSA2021.Assignment3.Tests
             IEnumerable<int> innerlist2 = new List<int>{3,4};
             IEnumerable<int>[] outerlist = {innerlist1, innerlist2};
 
-            IEnumerable<int> actuel = outerlist.Flatten();
+            IEnumerable<int> actual = outerlist.Flatten();
 
             IEnumerable<int> expected = new List<int>{1,2,3,4};
-            Assert.Equal(expected, actuel);
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void IsSecure_given_https_smashbros_com_return_true()
+        {
+            Uri sb = new Uri("https://www.smashbros.com/");
+            var actual = sb.IsSecure<bool>();
+            Assert.True(actual);
         }
     }
 }
