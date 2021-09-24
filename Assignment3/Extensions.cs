@@ -10,5 +10,7 @@ namespace BDSA2021.Assignment3
         => items.SelectMany(x => x).ToList<T>();
 
         public static bool IsSecure<T> (this Uri item) => item.Scheme == Uri.UriSchemeHttps;
+
+        public static int WordCount<T> (this string str) => throw new NotImplementedException();
     }
 }

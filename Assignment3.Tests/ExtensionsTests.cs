@@ -26,5 +26,13 @@ namespace BDSA2021.Assignment3.Tests
             var actual = sb.IsSecure<bool>();
             Assert.True(actual);
         }
+
+        [Fact]
+        public void WordCount_given_only_words_return_true()
+        {
+            var str = "Hej med dig";
+            var actual = str.WordCount<int>();
+            Assert.Equal(3, actual);
+        }
     }
 }
