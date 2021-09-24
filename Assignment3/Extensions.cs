@@ -6,8 +6,8 @@ namespace BDSA2021.Assignment3
 {
     public static class Extensions
     {
-        public static IEnumerable<T> Flatten<T> (this IEnumerable<IEnumerable<T>> items)
-        => throw new NotImplementedException();
+        public static IEnumerable<T> Flatten<T> (this IEnumerable<T>[] items)
+        => items.SelectMany(x => x).ToList<T>();
 
         public static bool IsSecure<T> (this Uri item) => Uri.
     }
