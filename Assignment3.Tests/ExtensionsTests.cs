@@ -28,9 +28,17 @@ namespace BDSA2021.Assignment3.Tests
         }
 
         [Fact]
-        public void WordCount_given_only_words_return_true()
+        public void WordCount_given_3_words_return_3()
         {
             var str = "Hej med dig";
+            var actual = str.WordCount<int>();
+            Assert.Equal(3, actual);
+        }
+
+        [Fact]
+        public void WordCount_given_2_non_words_and_3_words_return_3()
+        {
+            var str = "Hej med jer 2 :-)";
             var actual = str.WordCount<int>();
             Assert.Equal(3, actual);
         }
