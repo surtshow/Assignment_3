@@ -28,6 +28,14 @@ namespace BDSA2021.Assignment3.Tests
         }
 
         [Fact]
+        public void IsSecure_given_http_info_cern_ch_return_false()
+        {
+            Uri sb = new Uri("http://info.cern.ch/");
+            var actual = sb.IsSecure<bool>();
+            Assert.False(actual);
+        }
+
+        [Fact]
         public void WordCount_given_3_words_return_3()
         {
             var str = "Hej med dig";
