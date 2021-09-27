@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BDSA20201.Assignment3
+namespace BDSA2021.Assignment3
 {
     class Program
     {
